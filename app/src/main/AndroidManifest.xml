@@ -2,11 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ph.edu.dlsu.mobdeve.tiu.czarina.basicandroid">
 
+    <!--
+    android:roundIcon
+    This is for the app logo, you can right click mipmap under res,
+    select new, select image asset or image vector, choose a photo,
+    change the background color of photo, press next, press finish
+
+    ic_launcher_new is what i named the new icon -
+    you can change this if you want another icon
+    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_new_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BasicAndroid">
         <!--intent filter is what signals the program to
