@@ -15,7 +15,7 @@
     stretches in width from side of the screen to another-->
     <!--Wrap Content only uses the size needed notice how the height is just enough
     for the word Login-->
-
+    
     <TextView
         android:id="@+id/tv_login"
         android:text = "Login"
