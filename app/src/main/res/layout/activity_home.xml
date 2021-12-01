@@ -7,7 +7,6 @@ layer the words from top to bottom
 can also arrange things from left to right if orientation
 is changed to horizontal
 -->
-
 <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,15 +16,19 @@ is changed to horizontal
     tools:context=".HomeActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id = "@+id/et_message"
+    <!--
+    RecyclerView is one of the highly used widget
+    it can contain a list of objects
+    -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintRight_toRightOf = "parent"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
         />
-    <TextView
-        android:text= "Item 1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+
 
 </LinearLayout>

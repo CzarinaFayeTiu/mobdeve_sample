@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--this is what our per row data will look like -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="4dp"
+    android:padding="4dp"
+   >
+    <!--
+    ORIENTATION AND WEIGHT SUM
+    Columns - horizontal
+    Rows - vertical
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+        
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rosepic"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textfirstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textlastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
