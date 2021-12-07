@@ -1,34 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Linear layout unlike constraint layout used in activity_main
-follows the orientation, so the orientation of this is vertical
-so based on the order of how you write the code it will just
-layer the words from top to bottom
-
-can also arrange things from left to right if orientation
-is changed to horizontal
--->
 <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="10">
 
-    <!--
-    RecyclerView is one of the highly used widget
-    it can contain a list of objects
-    -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_margin="5dp"
+        android:background="@android:color/darker_gray">
+
+        <TableRow>
+            <TextView
+                android:text="User Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1" />
+
+            <EditText
+                android:id="@+id/tv_userid"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginStart="20sp"
+                android:width="150px" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="User Firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1" />
+
+            <EditText
+                android:id="@+id/tv_username"
+                android:width="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="User Lastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1" />
+
+            <EditText
+                android:id="@+id/tv_userlastname"
+                android:width="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp" />
+        </TableRow>
+
+    </TableLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/user_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf = "parent"
-        app:layout_constraintRight_toRightOf = "parent"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintEnd_toEndOf = "parent"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:weightSum="4"
+        android:background="@android:color/holo_blue_dark">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Save"
+            android:theme="@style/simpleButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/save_record"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="View"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:theme="@style/simpleButton"
+            android:id="@+id/view_record"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Update"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:theme="@style/simpleButton"
+            android:id="@+id/update_record"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Delete"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:theme="@style/simpleButton"
+            android:id="@+id/delete_record"/>
+    </LinearLayout>
 
 
 </LinearLayout>
